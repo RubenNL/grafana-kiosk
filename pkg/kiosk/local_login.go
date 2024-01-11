@@ -61,7 +61,7 @@ func GrafanaKioskLocal(cfg *Config) {
 		id=inputPassword, type=password, name=password
 	*/
 	// Give browser time to load next page (this can be prone to failure, explore different options vs sleeping)
-	time.Sleep(2000 * time.Millisecond)
+	time.Sleep(10000 * time.Millisecond)
 
 	if err := chromedp.Run(taskCtx,
 		chromedp.Navigate(generatedURL),
